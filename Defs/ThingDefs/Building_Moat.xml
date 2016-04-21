@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+  </ThingDef>
+
+<!--=============== Moat ===============-->
+<ThingDef ParentName="BuildingBase">
+    <defName>Moat</defName>
+    <thingClass>Building</thingClass>
+    <label>shallow moat</label>
+    <category>Building</category>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Security/MoatAtlasBlueprint</texPath>
+    </blueprintGraphicData>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/Security/MoatAtlas</texPath>
+      <shaderType>Transparent</shaderType>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>MapEdge</li>
+      </linkFlags>
+    </graphicData>
+    <altitudeLayer>LowPlant</altitudeLayer>
+    <uiIconPath>Things/Building/Security/MenuMoatIcon</uiIconPath>
+    <pathCost>90</pathCost>
+    <statBases>
+      <Beauty>-20</Beauty>
+      <WorkToMake>700</WorkToMake>
+      <Flammability>0</Flammability>
+    </statBases>
+    <description>A light perimeter defense to slow down your enemy.</description>
+    <placingDraggableDimensions>1</placingDraggableDimensions>   
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <constructEffect>ConstructDirt</constructEffect>
+    <designationHotKey>F</designationHotKey>
+    <repairEffect>ConstructDirt</repairEffect>
+  </ThingDef>
+
+</ThingDefs>

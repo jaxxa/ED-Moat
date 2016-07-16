@@ -46,7 +46,6 @@
     <terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
     <constructEffect>ConstructDirt</constructEffect>
-    <designationHotKey>F</designationHotKey>
     <repairEffect>ConstructDirt</repairEffect>
   </ThingDef>
 
